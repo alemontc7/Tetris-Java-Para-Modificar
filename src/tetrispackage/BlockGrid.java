@@ -1,3 +1,4 @@
+package tetrispackage;
 import java.awt.*;
 
 public class BlockGrid
