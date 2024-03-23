@@ -1,9 +1,11 @@
 package tetrispackage;
 import java.util.*;
 import java.awt.*;
+import java.util.logging.Logger;;
 
 public class TetrisGrid extends BlockGrid
 {
+	public static final Logger LOGGER = Logger.getLogger(TetrisGrid.class.getName());
 	private Vector<TetrisBlock> lockedBlocks = new Vector();
 	private TetrisBlock workingBlock;
 	private int points = 0;
@@ -184,13 +186,13 @@ public class TetrisGrid extends BlockGrid
 	public static void main(String[] args)
 	{
 		TetrisGrid grid = new TetrisGrid(10,20);
-		System.out.println(grid.setWorkingBlock(TetrisBlock.RIGHT_L.setLocation(10,10)));
+		LOGGER.info(grid.setWorkingBlock(TetrisBlock.RIGHT_L.setLocation(10, 10)));
 		Scanner s = new Scanner(System.in);
 		while(true)
 		{
 			grid.update();
 			grid.draw(null);
-			System.out.println(grid);
+			LOGGER.info(grid); 
 			String line = s.nextLine();
 			if(line.equals(""))
 				grid.moveDown();

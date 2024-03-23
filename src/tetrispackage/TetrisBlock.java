@@ -1,9 +1,11 @@
 package tetrispackage;
 import java.awt.Color;
 import java.util.Vector;
+import java.util.logging.Logger;
 
 public class TetrisBlock
 {
+	public static final Logger LOGGER = Logger.getLogger(TetrisBlock.class.getName());
 	public static final TetrisBlock LONG = new TetrisBlock(
 		new boolean[][]{{true, true, true, true}}, Color.RED);
 
@@ -202,6 +204,6 @@ public class TetrisBlock
 	{
 		TetrisBlock a = TetrisBlock.SQUARE.setLocation(2,2);
 		TetrisBlock b = TetrisBlock.SQUARE.setLocation(5,2);
-		System.out.println(a.overlaps(b));
+		LOGGER.info(a.overlaps(b));
 	}
 }
