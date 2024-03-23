@@ -1,10 +1,13 @@
 package tetrispackage;
 import java.awt.*;
+import java.util.logging.Logger;
+
 
 public class BlockGrid
 {
 	public static final int BLOCK_SIDE = 25;
 	public static final Color BACKGROUND_COLOR = Color.WHITE;
+	public static final Logger LOGGER = Logger.getLogger(BlockGrid.class.getName());
 
 	private Color[][] blocks;
 	private Color currentColor = BACKGROUND_COLOR;
@@ -22,6 +25,7 @@ public class BlockGrid
 		}
 		catch(Exception ex)
 		{
+            LOGGER.severe("Coordinates out of boundaries: (" + x + ", " + y + ")");
 		}
 	}
 

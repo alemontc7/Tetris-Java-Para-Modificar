@@ -1,2 +1,0 @@
-f
-javaS3252IUse static access with "javax.swing.WindowConstants" for "EXIT_ON_CLOSE". 2" /@
