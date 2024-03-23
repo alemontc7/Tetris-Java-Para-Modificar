@@ -22,6 +22,7 @@ public class BlockGrid
 		}
 		catch(Exception ex)
 		{
+			System.err.println("Coordenadas fuera de los límites de la cuadrícula: (" + x + ", " + y + ")");
 		}
 	}
 
