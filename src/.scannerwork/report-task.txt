@@ -1,6 +1,6 @@
-projectKey=Tetris_Java_Modificable
+projectKey=Tetis_Java_Modificable
 serverUrl=http://localhost:9000
 serverVersion=10.4.1.88267
-dashboardUrl=http://localhost:9000/dashboard?id=Tetris_Java_Modificable
-ceTaskId=b9a24cb9-c4af-44ce-aaf5-ad289cc30c7a
-ceTaskUrl=http://localhost:9000/api/ce/task?id=b9a24cb9-c4af-44ce-aaf5-ad289cc30c7a
+dashboardUrl=http://localhost:9000/dashboard?id=Tetis_Java_Modificable
+ceTaskId=6b736b3e-cb0b-4c03-8e68-7746fdd3cdee
+ceTaskUrl=http://localhost:9000/api/ce/task?id=6b736b3e-cb0b-4c03-8e68-7746fdd3cdee
