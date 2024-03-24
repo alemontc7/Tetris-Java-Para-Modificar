@@ -25,7 +25,8 @@ public class TetrisBlock
 	private Color color;
 
 	// location of the bottum left hand corner.
-	private int x, y;
+	private int x; 
+	private int y;
 
 	private TetrisBlock(boolean[][] blocks, Color color)
 	{
