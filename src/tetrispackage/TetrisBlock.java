@@ -204,6 +204,7 @@ public class TetrisBlock
 	{
 		TetrisBlock a = TetrisBlock.SQUARE.setLocation(2,2);
 		TetrisBlock b = TetrisBlock.SQUARE.setLocation(5,2);
-		LOGGER.info(a.overlaps(b));
+		boolean overlap = a.overlaps(b);
+		LOGGER.info(String.valueOf(overlap));
 	}
 }
