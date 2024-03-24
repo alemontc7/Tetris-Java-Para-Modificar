@@ -186,13 +186,15 @@ public class TetrisGrid extends BlockGrid
 	public static void main(String[] args)
 	{
 		TetrisGrid grid = new TetrisGrid(10,20);
-		LOGGER.info(String.valueOf(grid.setWorkingBlock(TetrisBlock.RIGHT_L.setLocation(10, 10))));
+		String logMessage = String.valueOf(grid.setWorkingBlock(TetrisBlock.RIGHT_L.setLocation(10, 10)));
+		LOGGER.info(logMessage);
 		Scanner s = new Scanner(System.in);
 		while(true)
 		{
 			grid.update();
 			grid.draw(null);
-			LOGGER.info(grid.toString()); 
+			logMessage = grid.toString();
+			LOGGER.info(logMessage); 
 			String line = s.nextLine();
 			if(line.equals(""))
 				grid.moveDown();

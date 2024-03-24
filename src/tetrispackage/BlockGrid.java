@@ -104,6 +104,7 @@ public class BlockGrid
 		BlockGrid grid = new BlockGrid(10,20);
 		TetrisBlock.RIGHT_L.setLocation(0,2).draw(grid);
 //		TetrisBlock.RIGHT_L.setLocation(1,15).rotateLeft().draw(grid);
-		LOGGER.info(grid.toString());
+		String logMessage = grid.toString();
+		LOGGER.info(logMessage);
 	}
 }
