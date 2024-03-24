@@ -1,7 +1,7 @@
 package tetrispackage;
 import java.util.*;
 import java.awt.*;
-import java.util.logging.Logger;;
+import java.util.logging.Logger;
 
 public class TetrisGrid extends BlockGrid
 {
