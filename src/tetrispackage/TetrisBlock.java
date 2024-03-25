@@ -2,9 +2,11 @@ package tetrispackage;
 import java.awt.Color;
 import java.util.Vector;
 import java.util.logging.Logger;
+import java.util.Random;
 
 public class TetrisBlock
 {
+	public static final Random randomNumberGenerator = new Random(); 
 	public static final Logger LOGGER = Logger.getLogger(TetrisBlock.class.getName());
 	public static final TetrisBlock LONG = new TetrisBlock(
 		new boolean[][]{{true, true, true, true}}, Color.RED);
@@ -43,7 +45,7 @@ public class TetrisBlock
 
 	public static TetrisBlock getRandomBlock()
 	{
-		switch((int)(Math.random()*5))
+		switch(randomNumberGenerator.nextInt(5))
 		{
 			case 0: return LONG;
 			case 1: return LEFT_L;
