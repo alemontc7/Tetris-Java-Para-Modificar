@@ -7,7 +7,7 @@ public class TetrisComponent extends JComponent implements KeyListener, Runnable
 {
 	public static final int DROP_DELAY_DECRESE_SPEED = 500;
 	public static final int MIN_DROP_DELAY = 3;
-	private TetrisGrid grid;
+	private transient TetrisGrid grid;
 	private int dropDelay = 25;
 	private int delay = 0;
 	private int delayDelay = 0;
