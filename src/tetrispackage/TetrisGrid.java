@@ -6,7 +6,7 @@ import java.util.logging.Logger;
 public class TetrisGrid extends BlockGrid
 {
 	public static final Logger LOGGER = Logger.getLogger(TetrisGrid.class.getName());
-	private Vector<TetrisBlock> lockedBlocks = new Vector();
+	private ArrayList<TetrisBlock> lockedBlocks = new ArrayList<>();
 	private TetrisBlock workingBlock;
 	private int points = 0;
 

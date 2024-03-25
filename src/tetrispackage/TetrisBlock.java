@@ -1,7 +1,8 @@
 package tetrispackage;
 import java.awt.Color;
-import java.util.Vector;
+import java.util.List;
 import java.util.logging.Logger;
+import java.util.ArrayList;
 import java.util.Random;
 
 public class TetrisBlock
@@ -176,9 +177,9 @@ public class TetrisBlock
 		return new TetrisBlock(new boolean[][]{{true}}, color, x, y);
 	}
 
-	public Vector<TetrisBlock> getSingleBlocks()
+	public List<TetrisBlock> getSingleBlocks()
 	{
-		Vector<TetrisBlock> parts = new Vector();
+		ArrayList<TetrisBlock> parts = new ArrayList<>();
 		for(int i = 0; i < blocks.length; i++)
 		{
 			for(int j = 0; j < blocks[0].length; j++)
