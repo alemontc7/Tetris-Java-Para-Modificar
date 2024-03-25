@@ -12,6 +12,7 @@ public class TetrisComponent extends JComponent implements KeyListener, Runnable
 	private int dropDelay = 25;
 	private int delay = 0;
 	private int delayDelay = 0;
+	private final transient Object lock = new Object();
 
 	public TetrisComponent(int width, int height)
 	{
@@ -48,7 +49,7 @@ public class TetrisComponent extends JComponent implements KeyListener, Runnable
 	@Override
 	public void paint(Graphics g)
 	{
-		synchronized(g)
+		synchronized(lock)
 		{
 			grid.draw(g);
 		}
