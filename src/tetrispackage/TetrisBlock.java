@@ -115,11 +115,7 @@ public class TetrisBlock
 		{
 			for(int j = 0; j < blocks[0].length; j++)
 			{
-				if(blocks[i][j])
-				{
-					if(other.overlaps(x+i, y-blocks[0].length+1+j))
-						return true;
-				}
+				if(blocks[i][j] && other.overlaps(x+i, y-blocks[0].length+1+j)) return true;
 			}
 		}
 		return false;
