@@ -44,7 +44,8 @@ public class TetrisComponent extends JComponent implements KeyListener, Runnable
 			repaint();
 		}
 	}
-
+	
+	@Override
 	public void paint(Graphics g)
 	{
 		synchronized(g)
