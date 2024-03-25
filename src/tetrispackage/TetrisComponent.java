@@ -8,6 +8,7 @@ public class TetrisComponent extends JComponent implements KeyListener, Runnable
 	public static final int DROP_DELAY_DECRESE_SPEED = 500;
 	public static final int MIN_DROP_DELAY = 3;
 	private transient TetrisGrid grid;
+    private volatile boolean isRunning = true;
 	private int dropDelay = 25;
 	private int delay = 0;
 	private int delayDelay = 0;
@@ -25,14 +26,18 @@ public class TetrisComponent extends JComponent implements KeyListener, Runnable
 
 	public void run()
 	{
-		while(true)
+		while(isRunning)
 		{
 			try
 			{
 				Thread.sleep(20);
 			}
-			catch(Exception ex)
+			catch(InterruptedException ex)
 			{
+				Thread.currentThread().interrupt();
+				ex.printStackTrace();
+				isRunning = false;
+				return;
 			}
 			requestFocus();
 			update();
