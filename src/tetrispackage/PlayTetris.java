@@ -9,7 +9,7 @@ public class PlayTetris extends JFrame
 		getContentPane().setLayout(new FlowLayout());
 		add(new TetrisComponent(10,20));
 		pack();
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 		setVisible(true);
 	}
 
