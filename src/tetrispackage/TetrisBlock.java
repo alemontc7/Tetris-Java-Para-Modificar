@@ -103,11 +103,7 @@ public class TetrisBlock
 		{
 			for(int j = 0; j < blocks[0].length; j++)
 			{
-				if(blocks[i][j])
-				{
-					if((this.x+i == x) && (this.y-blocks[0].length+1+j == y))
-						return true;
-				}
+				if(blocks[i][j] && (this.x+i == x) && (this.y-blocks[0].length+1+j == y)) return true;
 			}
 		}
 		return false;
