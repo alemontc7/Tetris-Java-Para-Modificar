@@ -50,8 +50,8 @@ public class TetrisBlock
 			case 2: return TEE;
 			case 3: return RIGHT_L;
 			case 4: return SQUARE;
+			default: return null; 
 		}
-		return null;
 	}
 
 	public int getX()
