@@ -85,11 +85,6 @@ public class TetrisComponent extends JComponent implements KeyListener, Runnable
 		else if(ke.getKeyCode() == KeyEvent.VK_PERIOD)
 			grid.turnRight();
 	}
-
-	public void keyReleased(KeyEvent ke)
-	{
-	}
-
 	public void keyTyped(KeyEvent ke)
 	{
 	}
