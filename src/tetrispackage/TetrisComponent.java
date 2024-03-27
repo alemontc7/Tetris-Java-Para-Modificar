@@ -93,5 +93,6 @@ public class TetrisComponent extends JComponent implements KeyListener, Runnable
 	}
 	public void keyReleased(KeyEvent ke)
 	{
+		Toolkit.getDefaultToolkit().beep();
 	}
 }
