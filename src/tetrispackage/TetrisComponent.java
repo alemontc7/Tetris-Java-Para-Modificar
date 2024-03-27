@@ -3,9 +3,6 @@ import java.awt.*;
 import javax.swing.*;
 import java.awt.event.*;
 
-import javax.sound.sampled.*;
-import java.io.*;
-
 
 
 public class TetrisComponent extends JComponent implements KeyListener, Runnable
