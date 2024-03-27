@@ -3,6 +3,11 @@ import java.awt.*;
 import javax.swing.*;
 import java.awt.event.*;
 
+import javax.sound.sampled.*;
+import java.io.*;
+
+
+
 public class TetrisComponent extends JComponent implements KeyListener, Runnable
 {
 	public static final int DROP_DELAY_DECRESE_SPEED = 500;
@@ -14,12 +19,12 @@ public class TetrisComponent extends JComponent implements KeyListener, Runnable
 	private int delayDelay = 0;
 	private final transient Object lock = new Object();
 
+
 	public TetrisComponent(int width, int height)
 	{
 		super();
 		grid = new TetrisGrid(width, height);
- 		setPreferredSize(new Dimension(grid.getGraphicsWidth(), grid.getGraphicsHeight()));
-
+ 		setPreferredSize(new Dimension(grid.getGraphicsWidth(), grid.getGraphicsHeight()));	
  		addKeyListener(this);
  		Thread run = new Thread(this);
  		run.start();
@@ -85,7 +90,11 @@ public class TetrisComponent extends JComponent implements KeyListener, Runnable
 		else if(ke.getKeyCode() == KeyEvent.VK_PERIOD)
 			grid.turnRight();
 	}
-	public void keyTyped(KeyEvent ke)
+	
+	public void keyTyped(KeyEvent ke) {
+		Toolkit.getDefaultToolkit().beep();
+	}
+	public void keyReleased(KeyEvent ke)
 	{
 	}
 }
