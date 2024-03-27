@@ -209,6 +209,9 @@ public class TetrisGrid extends BlockGrid
 				grid.turnLeft();
 			else if(line.equals(")"))
 				grid.turnRight();
+			else if(line.equals("_"))
+				break; 
+
 		}
 	}
 }
