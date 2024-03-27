@@ -161,7 +161,8 @@ public class TetrisGrid extends BlockGrid
 
 	public void clearRow(int row)
 	{
-		for(int i = 0; i < lockedBlocks.size(); i++)
+		int i; 
+		for(i = 0; i < lockedBlocks.size(); i++)
 		{
 			if(lockedBlocks.get(i).getY() == row)
 			{
