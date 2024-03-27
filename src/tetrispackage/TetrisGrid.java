@@ -21,6 +21,7 @@ public class TetrisGrid extends BlockGrid
 			setWorkingBlock(TetrisBlock.getRandomBlock().setLocation(getWidth()/2, 0));
 	}
 
+	@Override
 	public void draw(Graphics g)
 	{
 		clear();
